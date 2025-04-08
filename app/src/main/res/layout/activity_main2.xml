@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF6FC"
+    android:padding="16dp">
+
+    <!-- Barra Superior -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/iconAtras"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/atras"
+            android:contentDescription="Atrás" />
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TeleMemo"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <ImageView
+            android:id="@+id/iconEstadistica"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/estadistica"
+            android:contentDescription="Estadísticas"
+            android:onClick="abrirEstadisticas" />
+    </LinearLayout>
+
+    <!-- Palabras (4x3 = 12 botones) -->
+    <GridLayout
+        android:id="@+id/gridPalabras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="4"
+        android:alignmentMode="alignMargins"
+        android:useDefaultMargins="true"
+        android:layout_below="@id/topBar"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="120dp"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <!-- Resultado -->
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_below="@id/gridPalabras"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Botón Jugar -->
+    <!-- Botón Jugar -->
+    <Button
+        android:id="@+id/btnJugar"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:text="Jugar"
+        android:layout_below="@id/txtResultado"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-80dp"
+        android:backgroundTint="#7D5EFF"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+</RelativeLayout>
